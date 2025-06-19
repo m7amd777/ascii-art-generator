@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Error</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center-box">
+        <h2 class="error-large">{{.Err}}</h2>
+        <div class="ascii-preview">
+          <pre>{{.Desc}}</pre>
+        </div>
+        
+
+            <a href="/">Go Back Home</a>
+            <!-- should be replace with an anchor tag instead of the form -->
+        
+      </div>
+    </div>
+  </body>
+</html>

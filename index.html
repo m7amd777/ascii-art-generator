@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII Art Generator</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="center-box">
+        <h2 class="title">ASCII Art Generator</h2>
+        <form method="POST" action="/ascii-art">
+          <div class="input-group">
+            <label>
+              <textarea name="asciiArt" rows="4" cols="50">{{.Word}}</textarea>
+            </label>
+          </div>
+          <div class="select-group">
+            <label>
+              <p>Style</p>
+              <select name="style">
+             <option value="shadow" {{if eq .Style "shadow"}}selected{{end}}>shadow</option>
+             <option value="standard" {{if eq .Style "standard"}}selected{{end}}>standard</option>
+             <option value="thinkertoy" {{if eq .Style "thinkertoy"}}selected{{end}}>thinkertoy</option>
+            </select>
+            </label>
+          </div>
+       
+           
+          <textarea readonly class="ascii-art-area">{{.Ascii}}</textarea>       
+         
+          <div class="button-wrapper">
+            <input type="submit" value="Generate"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
