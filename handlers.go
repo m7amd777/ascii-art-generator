@@ -42,6 +42,10 @@ func submitHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError) // set status code to 500
 		executeTemp(w, "error.html", error500)        // if error occurs, execute error template
 		http.Error(w, "500 Internal Server Error", http.StatusInternalServerError)
+	case 418:
+		w.WriteHeader(http.StatusBadRequest)
+		executeTemp(w, "error.html", error418)
+		http.Error(w, "400 Bad Request", http.StatusBadRequest)
 	}
 	mydata := Data{
 		Word:  word1,

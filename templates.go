@@ -36,6 +36,12 @@ var error500 = Error{
 	Desc: "Internal Server Error",
 }
 
+// used an unused http status code "i am a teapot" to make a customized message for bad request of exceeding characters
+var error418 = Error{
+	Err:  "Error: 400",
+	Desc: "Bad Request, You have exceeded the character limit",
+}
+
 func executeTemp(w http.ResponseWriter, filename string, data interface{}) {
 	tempp, err := template.ParseFiles(filename)
 	if err != nil {

@@ -21,7 +21,7 @@ func ProcessASCII(input string, style string) (string, int) {
 	// Character Limit
 	if len(input) > maxInput {
 		fmt.Printf("Error: input too long (max %d characters)\n", maxInput)
-		return "" , 500
+		return "" , 418
 	}
 	input = strings.ReplaceAll(input, "\r\n", "\n")
 	// Ascii Character Restriction
@@ -90,7 +90,6 @@ func ProcessASCII(input string, style string) (string, int) {
 		}
 		final += result
 	}
-	fmt.Println(final)
 	return final, 200 //return the final result string to the main function
 }
 
