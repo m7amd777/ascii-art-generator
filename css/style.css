@@ -78,7 +78,8 @@ select {
 
 .button-wrapper {
   display: flex;
-  padding: 1rem;
+  padding: 0px;
+  margin-top: 10px;
 }
 
 .submit-button {
@@ -154,6 +155,7 @@ input[type="submit"]:hover {
 .input-group label,
 .select-group label {
   width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;

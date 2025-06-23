@@ -11,7 +11,7 @@ func ProcessASCII(input string, style string) (string, int) {
 	maxInput := 1000
 
 	if len(input) == 0 {
-		return "", 200
+		return "", 400
 	}
 
 	if input == "\\n" {

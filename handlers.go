@@ -52,5 +52,5 @@ func submitHandler(w http.ResponseWriter, r *http.Request) {
 		Ascii: ascii1,
 		Style: style,
 	}
-	executeTemp(w, "index.html", mydata) // execute index template with data
+	executeTemp(w, "indexout.html", mydata) // execute index template with data
 }
